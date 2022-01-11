@@ -92,15 +92,13 @@ In Ethereum every transaction has a nonce. This is so that each transaction can 
 
 That means that transactions are always processed in order for a given account, and so incrementing nonces is a very sensitive matter that is easy to mess up, especially when a user is interacting with multiple applications with pending transactions using the same account, potentially across multiple devices.
 
-For these reasons, dfox currently does not provide application developers any way to customize the nonce of transactions it suggests. Instead, dfox [assists the user in managing their transaction queue themselves](https://dfox.zendesk.com/hc/en-us/articles/360015489251).
-
 ### Gas Price [optional]
 
 Optional parameter - best used on private blockchains.
 
 In Ethereum, every transaction specifies a price for the gas that it will consume. To maximize their profit, block producers will pick pending transactions with higher gas prices first when creating the next block. This means that a high gas price will usually cause your transaction to be processed faster, at the cost of greater transaction fees. Note that this may not be true for e.g. Layer 2 networks, which may have a constant gas price or no gas price at all.
 
-In other words, while you can ignore this parameter on dfox's default networks, you may want to include it in situations where your application knows more about the target network than we do. On our default networks, dfox allows users to choose between "slow," "medium," and "fast" options for their gas price. To learn how to use advanced gas controls [visit here](https://dfox.zendesk.com/hc/en-us/articles/360022895972).
+In other words, while you can ignore this parameter on dfox's default networks, you may want to include it in situations where your application knows more about the target network than we do. On our default networks, dfox allows users to choose between "slow," "medium," and "fast" options for their gas price. 
 
 ### Gas Limit [optional]
 
